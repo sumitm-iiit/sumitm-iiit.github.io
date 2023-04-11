@@ -1,0 +1,165 @@
+Here is the vertical context
+{
+  "id": "ecommerce",
+  "name": "E Commerce",
+  "entities": [
+    {
+      "id": "$Merchant",
+      "defaultName": "Merchant",
+      "entityFields": [
+        {
+          "id": "$Id",
+          "defaultName": "Id"
+        },
+        {
+          "id": "$AnnualRevenue",
+          "defaultName": "AnnualRevenue",
+          "kind": "_long"
+        },
+        {
+          "id": "$SubscriptionType",
+          "defaultName": "SubscriptionType"
+        }
+      ]
+    },
+    {
+      "id": "$Payment_Gateway",
+      "defaultName": "Payment_Gateway",
+      "entityFields": [
+        {
+          "id": "$Id",
+          "defaultName": "Id"
+        },
+        {
+          "id": "$Name",
+          "defaultName": "Name"
+        }
+      ]
+    },
+    {
+      "id": "$City",
+      "defaultName": "City",
+      "entityFields": [
+        {
+          "id": "$Id",
+          "defaultName": "Id"
+        },
+        {
+          "id": "$Name",
+          "defaultName": "Name"
+        }
+      ]
+    },
+    {
+      "id": "$Country",
+      "defaultName": "Country",
+      "entityFields": [
+        {
+          "id": "$Id",
+          "defaultName": "Id"
+        },
+        {
+          "id": "$Name",
+          "defaultName": "Name"
+        }
+      ]
+    },
+    {
+      "id": "$Shipping_Partner",
+      "defaultName": "Shipping_Partner",
+      "entityFields": [
+        {
+          "id": "$Id",
+          "defaultName": "Id"
+        },
+        {
+          "id": "$Name",
+          "defaultName": "Name"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "id": "$Search",
+      "defaultName": "Search",
+      "eventFields": [
+        {
+          "id": "$MerchantId",
+          "defaultName": "MerchantId"
+        },
+        {
+          "id": "$City",
+          "defaultName": "City"
+        }
+      ]
+    },
+    {
+      "id": "$Cart",
+      "defaultName": "Cart",
+      "eventFields": [
+        {
+          "id": "$MerchantId",
+          "defaultName": "MerchantId"
+        },
+        {
+          "id": "$City",
+          "defaultName": "City"
+        },
+        {
+          "id": "$CartTotal",
+          "defaultName": "CartTotal",
+          "kind": "_long"
+        }
+      ],
+      "aliases": [
+        "/addToCart"
+      ]
+    },
+    {
+      "id": "$Payment",
+      "defaultName": "Payment",
+      "eventFields": [
+        {
+          "id": "$MerchantId",
+          "defaultName": "MerchantId"
+        },
+        {
+          "id": "$Amount",
+          "defaultName": "Amount",
+          "kind": "_long"
+        },
+        {
+          "id": "$ShippingPartner",
+          "defaultName": "ShippingPartner"
+        },
+        {
+          "id": "$PaymentProvider",
+          "defaultName": "PaymentProvider"
+        }
+      ],
+      "aliases": [
+        "/payment"
+      ]
+    }
+  ]
+}
+
+Here is the sample json
+{
+  "duration": 202000,
+  "timeStamp": 1681202938566000,
+  "bicycle": {},
+  "data": {
+    "Merchant_Id": "125082",
+    "RequestId": "b6784bbd-55c0-4d8d-815b-001a3552594c",
+    "ServiceName": "cart",
+    "Region": "usa",
+    "IP_Address": "142.231.110.50"
+  },
+  "servedByInstance": "ecommerce-save-cart-5d4c58fc5f-4f46k",
+  "service": "save-cart",
+  "hasError": false,
+  "url": "/s/save-cart",
+  "errorMsg": ""
+}
